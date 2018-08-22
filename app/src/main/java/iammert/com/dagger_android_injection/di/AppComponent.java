@@ -19,12 +19,9 @@ import iammert.com.dagger_android_injection.AndroidSampleApp;
         AndroidSupportInjectionModule.class,
         AppModule.class,
         ActivityBuilder.class})
-public interface AppComponent extends AndroidInjector<DaggerApplication> {
+public interface AppComponent{
 
     void inject(AndroidSampleApp app);
-
-    @Override
-    void inject(DaggerApplication instance);
 
     @Component.Builder
     interface Builder {

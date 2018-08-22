@@ -1,8 +1,13 @@
 package iammert.com.dagger_android_injection;
 
+import android.app.Activity;
+import android.app.Application;
+
+import javax.inject.Inject;
+
 import dagger.android.AndroidInjector;
-import dagger.android.DaggerApplication;
-import iammert.com.dagger_android_injection.di.AppComponent;
+import dagger.android.DispatchingAndroidInjector;
+import dagger.android.HasActivityInjector;
 import iammert.com.dagger_android_injection.di.DaggerAppComponent;
 
 
@@ -10,12 +15,19 @@ import iammert.com.dagger_android_injection.di.DaggerAppComponent;
  * Created by mertsimsek on 25/05/2017.
  */
 
-public class AndroidSampleApp extends DaggerApplication {
+public class AndroidSampleApp extends Application implements HasActivityInjector {
 
+    @Inject
+    DispatchingAndroidInjector<Activity> activityDispatchingAndroidInjector;
 
-    protected AndroidInjector<? extends DaggerApplication> applicationInjector() {
-        AppComponent appComponent = DaggerAppComponent.builder().application(this).build();
-        appComponent.inject(this);
-        return appComponent;
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        DaggerAppComponent.builder().application(this).build().inject(this);
+    }
+
+    @Override
+    public AndroidInjector<Activity> activityInjector() {
+        return activityDispatchingAndroidInjector;
     }
 }
