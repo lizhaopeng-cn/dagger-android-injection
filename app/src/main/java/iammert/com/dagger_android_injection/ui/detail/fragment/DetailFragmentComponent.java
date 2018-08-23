@@ -14,7 +14,7 @@ import iammert.com.dagger_android_injection.ui.main.MainActivityComponent;
  * Created by lzp48947 on 2018/8/22.
  */
 @Subcomponent(modules = DetailFragmentModule.class)
-public class DetailFragmentComponent {
+public interface DetailFragmentComponent {
     @Subcomponent.Builder
     abstract class Builder extends AndroidInjector.Builder<DetailFragment>{}
 
