@@ -6,7 +6,6 @@ import android.content.Context;
 import dagger.Binds;
 import dagger.Module;
 import iammert.com.dagger_android_injection.ui.detail.DetailActivityComponent;
-import iammert.com.dagger_android_injection.ui.main.MainActivity;
 import iammert.com.dagger_android_injection.ui.main.MainActivityComponent;
 
 /**

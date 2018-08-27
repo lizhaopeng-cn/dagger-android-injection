@@ -10,9 +10,8 @@ import iammert.com.dagger_android_injection.ui.detail.fragment.DetailFragmentCom
  */
 @Subcomponent(modules = {
 //        AndroidInjectionModule.class,
-        DetailActivityModule.class
-//        ,
-//        DetailActivityBuilder.class
+        DetailActivityModule.class,
+        DetailFragmentBuilder.class
 })
 public interface DetailActivityComponent extends AndroidInjector<DetailActivity> {
     @Subcomponent.Builder
