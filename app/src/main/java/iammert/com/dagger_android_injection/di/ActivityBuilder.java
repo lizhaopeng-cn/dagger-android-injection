@@ -4,7 +4,7 @@ import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
 import iammert.com.dagger_android_injection.ui.detail.DetailActivity;
 import iammert.com.dagger_android_injection.ui.detail.DetailActivityModule;
-import iammert.com.dagger_android_injection.ui.detail.DetailFragmentProvider;
+import iammert.com.dagger_android_injection.ui.detail.fragment.DetailFragmentProvider;
 import iammert.com.dagger_android_injection.ui.main.MainActivity;
 import iammert.com.dagger_android_injection.ui.main.MainActivityModule;
 

@@ -1,4 +1,4 @@
-package iammert.com.dagger_android_injection.ui.detail;
+package iammert.com.dagger_android_injection.ui.detail.fragment;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
